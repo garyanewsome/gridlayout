@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid Layout</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+</head>
+<body>
+<div id="main">
+	<section id="top-row">
+		<div id="topleft">
+			<h2>Grid Layout</h2>
+			<p>Basic grid layout using Bourbon and Neat.<br><br>
+			To be used as an example, learning tool, and for reference.</p>
+		</div>
+		<div id="topmiddle">
+			<h2>Using Bourbon and Neat</h2>
+			<ul>
+				<li>gem install sass</li>
+				<li>gem install bourbon</li>
+				<li>gem install neat</li>
+				<li>cd to project stylesheet directory</li>
+				<li>bourbon install</li>
+				<li>neat install</li>
+			</ul>
+		</div>
+		<div id="topright">
+			<h2>Import Statements</h2>
+			<p>Used atop SCSS file to import both Bourbon and Neat</p>
+			<ul>
+				<li>@import "libraries/bourbon/bourbon.scss";</li>
+				<li>@import "libraries/neat/neat.scss";</li>
+			</ul>
+		</div>
+	</section>
+	<section id="middle-row">
+		<div id="middleleft">
+			<h2>Koala</h2>
+			<h4><a href="http://koala-app.com">http://koala-app.com</a></h4>
+			<h4>Used to compile SCSS to standard CSS.</h4>
+			<p>Open your project folder in Koala, create a SCSS file. Each time you save Koala will compile the SCSS file into a CSS file of the same name.</p>
+		</div>
+		<div id="middleright">
+			<h2>SCSS Variables</h2>
+			<p>Declare SCSS variables with a `$`<br></p>
+			<p id="code">&nbsp;&nbsp;$textcolor: #777777;<br></p>
+			<p>Then call them in various elements the same way.<br></p>
+			<p id="code">&nbsp;&nbsp;p{<br>&nbsp;&nbsp;&nbsp;&nbsp;color: $textcolor;<br>&nbsp;&nbsp;}</p>
+		</div>		
+	</section>
+	<section id="bottom-row">
+		<div id="bottom">
+		<h2>Column Offset</h2>
+			<p>This section intentionally offset to the right 2 columns. Leaving the preceding area blank.</p>
+			<ul>
+				<li>@include shift(2);</li>
+			</ul>
+		</div>
+	</section>

@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+@import "libraries/bourbon/bourbon.scss";
+
+@import "libraries/neat/neat.scss";
+
+$background: #000000;
+$darktext: #333333;
+$lighttext: #FFFFFF;
+$topleftcolor: #800000;
+$topmiddlecolor: #EE5500;
+$toprightcolor: #EBC815;
+$middleleftcolor: #1DF914;
+$middlerightcolor: #003366;
+$bottomcolor: #5C246E;
+
+h1, h2, h3, h4, h5, h6{
+	text-align: center;
+}
+
+#main{
+	@include outer-container();
+	background-color: $background;
+	padding: 8px;
+}
+
+#top-row{
+	@include span-columns(12);
+}
+
+#topleft{
+	background-color: $topleftcolor;
+	color: $lighttext;
+	padding: 8px;
+	@include span-columns(4);
+}
+
+#topmiddle{
+	background-color: $topmiddlecolor;
+	color: $lighttext;
+	padding: 8px;
+	@include span-columns(4);
+}
+
+#topright{
+	background-color: $toprightcolor;
+	color: $darktext;
+	padding: 8px;
+	@include span-columns(4);
+}
+
+#topleft, #topmiddle, #topright{
+	@media screen and (max-width: 768px){
+		@include span-columns(12);
+	}
+}
+
+#middle-row{
+	@include span-columns(12);
+	margin-top: 8px;
+}
+
+#middleleft{
+	background-color: $middleleftcolor;
+	color: $darktext;
+	padding: 8px;
+	p{
+		text-align: center;
+	}
+	a{
+		color: #0000FF;
+	}
+	a:hover{
+		font-style: italic;
+		font-size: 1.1em;
+	}
+	@include span-columns(4);
+}
+
+#middleright{
+	background-color: $middlerightcolor;
+	color: $lighttext;
+	padding: 8px;
+	@include span-columns(8);
+}
+
+#bottom-row{
+	@include span-columns(12);
+	margin-top: 8px;
+}
+
+#bottom{
+	background-color: $bottomcolor;
+	color: $lighttext;
+	padding: 8px;
+	@include span-columns(4);
+	@include shift(2);
+}
+
+p#code{
+	font-family: Georgia, "Times New Roman", serif;
+	background-color: #DEDEDE;
+	color: #000000;
+}
